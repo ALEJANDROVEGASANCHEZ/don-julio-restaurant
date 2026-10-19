@@ -1,5 +1,17 @@
 <script setup>
-import { Link } from '@inertiajs/vue3';
+import { computed } from 'vue';
+import { Link, usePage } from '@inertiajs/vue3';
+
+// Enlace activo según la ruta actual (resaltado dinámico del menú)
+const page = usePage();
+const currentPath = computed(() => page.url);
+
+function isActive(prefix) {
+  return currentPath.value.startsWith(prefix);
+}
+
+const linkActive = 'border-brand-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium';
+const linkInactive = 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium';
 </script>
 
 <template>
@@ -15,16 +27,16 @@ import { Link } from '@inertiajs/vue3';
               </Link>
             </div>
             <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-              <Link href="/dashboard" class="border-brand-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              <Link href="/dashboard" :class="isActive('/dashboard') ? linkActive : linkInactive">
                 Dashboard
               </Link>
-              <Link href="/products" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              <Link href="/products" :class="isActive('/products') ? linkActive : linkInactive">
                 Productos
               </Link>
-              <Link href="/salon" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              <Link href="/salon" :class="isActive('/salon') ? linkActive : linkInactive">
                 Salón
               </Link>
-              <Link href="/kitchen" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              <Link href="/kitchen" :class="isActive('/kitchen') ? linkActive : linkInactive">
                 Cocina
               </Link>
             </div>

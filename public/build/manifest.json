@@ -1,28 +1,81 @@
 {
-  "resources/css/app.css": {
-    "file": "assets/app-DCuJKN9S.css",
-    "src": "resources/css/app.css",
-    "isEntry": true
-  },
-  "resources/js/Pages/Dashboard/Index.vue": {
-    "file": "assets/Index-CSFN33-g.js",
-    "name": "Index",
-    "src": "resources/js/Pages/Dashboard/Index.vue",
-    "isDynamicEntry": true,
+  "_AdminLayout-nqDzH9bz.js": {
+    "file": "assets/AdminLayout-nqDzH9bz.js",
+    "name": "AdminLayout",
     "imports": [
       "resources/js/app.js"
     ]
   },
+  "resources/css/app.css": {
+    "file": "assets/app-DvBFdz5U.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/Pages/Dashboard/Index.vue": {
+    "file": "assets/Index-BcfNgMXe.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Dashboard/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_AdminLayout-nqDzH9bz.js",
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/app-DvBFdz5U.css"
+    ]
+  },
+  "resources/js/Pages/Products/Create.vue": {
+    "file": "assets/Create-DoDIjZoi.js",
+    "name": "Create",
+    "src": "resources/js/Pages/Products/Create.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-nqDzH9bz.js"
+    ],
+    "css": [
+      "assets/app-DvBFdz5U.css"
+    ]
+  },
+  "resources/js/Pages/Products/Edit.vue": {
+    "file": "assets/Edit-BVSoJML6.js",
+    "name": "Edit",
+    "src": "resources/js/Pages/Products/Edit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-nqDzH9bz.js"
+    ],
+    "css": [
+      "assets/app-DvBFdz5U.css"
+    ]
+  },
+  "resources/js/Pages/Products/Index.vue": {
+    "file": "assets/Index-C29I_8B4.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Products/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-nqDzH9bz.js"
+    ],
+    "css": [
+      "assets/app-DvBFdz5U.css"
+    ]
+  },
   "resources/js/app.js": {
-    "file": "assets/app-D6Qn3dhe.js",
+    "file": "assets/app-QHoiuDO4.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
-      "resources/js/Pages/Dashboard/Index.vue"
+      "resources/js/Pages/Dashboard/Index.vue",
+      "resources/js/Pages/Products/Create.vue",
+      "resources/js/Pages/Products/Edit.vue",
+      "resources/js/Pages/Products/Index.vue"
     ],
     "css": [
-      "assets/app-DCuJKN9S.css"
+      "assets/app-DvBFdz5U.css"
     ]
   }
 }
