@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+/* ─── Paleta de marca "Don Julio" (Tailwind CSS v4) ───────────────
+   El build usa Tailwind v4 vía @tailwindcss/postcss; los tokens de
+   color se declaran con @theme para generar las utilidades bg-brand-*,
+   text-brand-*, border-brand-*, etc. (naranja corporativo #ef7713). */
+@theme {
+  --color-brand-50: #fef7ee;
+  --color-brand-100: #fdedd3;
+  --color-brand-200: #fad7a5;
+  --color-brand-300: #f6ba6d;
+  --color-brand-400: #f29433;
+  --color-brand-500: #ef7713;
+  --color-brand-600: #e05d09;
+  --color-brand-700: #b9450a;
+  --color-brand-800: #933710;
+  --color-brand-900: #782f10;
+}
